@@ -1,0 +1,3 @@
+graft HandWrittenTextInterpreter
+global-exclude *.py[cod] __pycache__ *.so *.ipynb
+recursive-exclude  HandWrittenTextInterpreter/jupy *
