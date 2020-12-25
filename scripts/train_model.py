@@ -1,6 +1,7 @@
 import tensorflow as tf
 from tensorflow.keras import Sequential
 from tensorflow.keras import layers
+from tensorflow.keras import models
 from tensorflow.keras.callbacks import EarlyStopping
 
 def fit_model(x_train, y_train_cat):
