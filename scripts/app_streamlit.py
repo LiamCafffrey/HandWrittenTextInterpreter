@@ -132,7 +132,7 @@ def home():
 
     img_file_buffer = st.file_uploader("Upload an image", type=["jpg"])
 
-    st.markdown('When uploading an image, please be aware that the model needs the picture to be **one singular letter/char of the english alphabet** in a **white backgroud**, written with a **black marker**.')
+    st.markdown('When uploading an image, please be aware that the model needs the picture to be **one singular letter/char of the english alphabet** photographed in a **white backgroud** and written with a **black marker**.')
 
     if img_file_buffer != None:
 
@@ -140,7 +140,15 @@ def home():
         inverted_image, image_predict_on = img_prep(image)
         c1,c2,c3,c4 = st.beta_columns((2,4,6,8))
         pred = interpreter(neural_model.predict_classes(image_predict_on))
-        st.title(f'I predict the letter to be : {pred} :sunglasses:')
+        alphabet = 'A aB bC cD dE eF fG gH hI iJ jK kL lM mN nO oP pQ qR rS sT tU uV vW wX xY yZ z'
+        num = '0123456789'
+        if pred in alphabet:
+            st.title(f'I predict your input to be the letter : {pred} :sunglasses:')
+        elif pred in num:
+            st.title(f'I predict your input to be the number : {pred} :sunglasses:')
+        else:
+            st.title('Please select a different file')
+
 
     else:
         st.warning('No image has been selected')
