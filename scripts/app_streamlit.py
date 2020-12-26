@@ -82,7 +82,7 @@ def welcome():
 
     st.subheader('A simple app that shows how powerfull a Neural Network can be. Upload an image and watch the magic happen..')
 
-    st.image('../raw_data/welcome3.jpg',use_column_width=True)
+    st.image('../web_app_resources/welcome3.jpg',use_column_width=True)
 
 def home():
     page_bg_img = '''
