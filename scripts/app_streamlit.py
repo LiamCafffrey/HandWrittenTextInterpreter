@@ -80,7 +80,7 @@ def welcome():
 
     st.title('Image Processing')
 
-    st.subheader('A simple app that shows how powerfull a Neural Network can be. Upload an image and watch the magic happen..')
+    st.subheader('A simple app that shows how powerful a Neural Network can be. Upload an image and watch the magic happen..')
 
     st.image('../web_app_resources/welcome3.jpg',use_column_width=True)
 
@@ -132,7 +132,7 @@ def home():
 
     img_file_buffer = st.file_uploader("Upload an image", type=["jpg"])
 
-    st.markdown('When uploading an image, please be aware that the model needs the picture to be **one singular letter/char of the english alphabet** photographed in a **white backgroud** and written with a **black marker**.')
+    st.markdown('When uploading an image, please be aware that the model needs the picture to be **one singular letter/char of the English alphabet** photographed in a **white backgroud** and written with a **black marker**.')
 
     if img_file_buffer != None:
 
